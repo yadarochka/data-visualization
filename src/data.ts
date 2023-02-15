@@ -1,4 +1,4 @@
-const data = [
+export const data = [
   { period: "Март", name: "В программе ЦП", value: 120 },
   { period: "Апрель", name: "В программе ЦП", value: 120 },
   { period: "Май", name: "В программе ЦП", value: 120 },
