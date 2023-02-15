@@ -22,7 +22,7 @@ export const legendChangedOption = (selectedSeries: SelectedSeries) => {
           show: !selectedSeries[names.IN_CP],
           fontWeight: "bold",
           position: "outside",
-          formatter: (params) => {
+          formatter: (params: { name: string; seriesName: names }) => {
             return sumByName(params.name, params.seriesName).toString();
           },
         },
@@ -40,7 +40,7 @@ export const legendChangedOption = (selectedSeries: SelectedSeries) => {
           show: true,
           fontWeight: "bold",
           position: "outside",
-          formatter: (params) => {
+          formatter: (params: { name: string; seriesName: names }) => {
             if (selectedSeries[names.IN_CP] && selectedSeries[names.IN_IT]) {
               return sumInByMonth(params.name);
             }
@@ -61,7 +61,7 @@ export const legendChangedOption = (selectedSeries: SelectedSeries) => {
           fontWeight: "bold",
           show: !selectedSeries[names.OUT_CP],
           position: "outside",
-          formatter: (params) => {
+          formatter: (params: { name: string; seriesName: names }) => {
             return sumByName(params.name, params.seriesName).toString();
           },
         },
@@ -75,7 +75,7 @@ export const legendChangedOption = (selectedSeries: SelectedSeries) => {
           show: true,
           fontWeight: "bold",
           position: "outside",
-          formatter: (params) => {
+          formatter: (params: { name: string; seriesName: names }) => {
             if (selectedSeries[names.OUT_CP] && selectedSeries[names.OUT_IT]) {
               return sumOutByMonth(params.name);
             }

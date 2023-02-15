@@ -8,7 +8,7 @@ if (main) {
   const myChart = echarts.init(main);
   myChart.setOption(option);
 
-  myChart.on("legendselectchanged", function (params) {
+  myChart.on("legendselectchanged", function (params: { selected: any }) {
     const selectedSeries = params.selected;
     myChart.setOption(legendChangedOption(selectedSeries));
   });

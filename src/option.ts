@@ -133,7 +133,7 @@ const option: ECOption = {
   },
   xAxis: { type: "category", data: monthList },
   yAxis: {},
-  series: series.map((item, index) =>
+  series: series.map((item) =>
     Object.assign(item, {
       type: "bar",
     })
